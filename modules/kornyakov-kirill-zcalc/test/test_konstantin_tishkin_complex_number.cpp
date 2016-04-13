@@ -1,18 +1,17 @@
- // Copyright 2016 Kornyakov Kirill
+ // Copyright 2016 Tishkin Konstantin
 
  #include <gtest/gtest.h>
 
  #include "include/complex_number.h"
 
- TEST(Kornyakov_Kirill_ComplexNumberTest, Can_Create_Zero) {
-     // Arrange
-     double re = 0.0;
-     double im = 0.0;
+ TEST(Tishkin_Konstantin_ComplexNumberTest, Can_multiple) {
+    // Arrange
+    ComplexNumber a(1.0, 2.0);
+    ComplexNumber b(3.0, 4.0);
 
-     // Act
-     ComplexNumber z(re, im);
+    // Act
+    ComplexNumber m = a * b;
 
-     // Assert
-     EXPECT_EQ(re, z.getRe());
-     EXPECT_EQ(im, z.getIm());
- }
+    // Assert
+    EXPECT_EQ(m, a);
+}
